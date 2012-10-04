@@ -1,0 +1,16 @@
+
+mysql:
+  adapter: mysql
+  hostname: localhost
+  username: gemtests
+  password: rsanders
+  database: ar_inception
+  pool: 30
+
+postgresql:
+  adapter: postgresql
+  hostname: localhost
+  username: gemtests
+  password: rsanders
+  database: ar_inception
+  pool: 30
