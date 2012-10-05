@@ -1,7 +1,7 @@
 language: ruby
 
 before_script:
-  - mysql -u root -e 'create database ar_inception; grant all privileges on ar_inception.* to "rsanders"@localhost identified by "rsanders";'
+  - mysql -u root -e 'create database ar_inception; grant all privileges on ar_inception.* to "gemtests"@localhost identified by "rsanders";'
   - echo "Ran before_scripts"
 
 rvm:
