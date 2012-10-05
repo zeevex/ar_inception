@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply surround the block you wish to run at the "base" transaction level like so:
+
+    ActiveRecord::Base.escape_transaction do
+        your.code.here
+    end
+
+## Build Status
+
+[![Build Status](https://travis-ci.org/zeevex/ar_inception.png)](https://travis-ci.org/zeevex/ar_inception)
 
 ## Contributing
 
