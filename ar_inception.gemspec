@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = ArInception::VERSION
   gem.authors       = ["Robert Sanders"]
   gem.email         = ["robert@zeevex.com"]
-  gem.description   = %q{Extension to ActiveRecord 2.3 to provide parallel transaction scopes.}
-  gem.summary       = %q{Extension to ActiveRecord 2.3 to provide parallel transaction scopes.}
+  gem.description   = %q{Extension to ActiveRecord 3.x to provide parallel transaction scopes.}
+  gem.summary       = %q{Extension to ActiveRecord 3.x to provide parallel transaction scopes.}
   gem.homepage      = "http://github.com/zeevex/parallel_transaction_scope"
 
   gem.files         = `git ls-files`.split($/)
@@ -17,10 +17,10 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
   
-  gem.add_dependency 'activerecord', '~> 2.3.10'
-  gem.add_dependency 'activesupport', '~> 2.3.10'
+  gem.add_dependency 'activerecord', '>= 3.0.0'
+  gem.add_dependency 'activesupport', '>= 3.0.0'
 
-  gem.add_development_dependency 'rspec', '~> 2.9.0'
+  gem.add_development_dependency 'rspec', '>= 2.9.0'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'mysql'
 
