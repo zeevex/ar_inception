@@ -14,4 +14,4 @@ notifications:
   email:
     - robert@zeevex.com
 
-script: bundle exec rake appraisal spec
+script: rake appraisal spec
