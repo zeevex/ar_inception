@@ -3,6 +3,7 @@ $: << File.expand_path(File.dirname(__FILE__) + '../lib')
 
 require 'rspec'
 require 'ar_inception'
+require 'logger'
 
 # sqlite doesn't support multiple active connections to the same DB
 ENV['DB'] ||= 'mysql'
@@ -25,4 +26,3 @@ else
   raise "Please create #{database_yml} first to configure your database. Take a look at: #{database_yml}.sample"
 end
 
-ArInception.install
