@@ -2,6 +2,7 @@ language: ruby
 
 before_script:
   - mysql -u root -e 'create database ar_inception; grant all privileges on ar_inception.* to "gemtests"@localhost identified by "rsanders";'
+  - bundle exec rake appraisal:install
   - echo "Ran before_scripts"
 
 rvm:
@@ -14,5 +15,4 @@ notifications:
   email:
     - robert@zeevex.com
 
-before_script: bundle exec rake appraisal:install
 script: bundle exec rake appraisal spec
