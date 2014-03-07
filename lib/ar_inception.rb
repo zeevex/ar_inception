@@ -7,6 +7,8 @@ module ArInception
   MAX_ESCAPE_DEPTH = 10
 
   def self.install
+    return if ActiveRecord::Base.respond_to?(:escape_transaction)
+
     #
     # These changes are only used for the non-threaded implementation
     # 
