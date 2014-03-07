@@ -115,3 +115,5 @@ module ArInception
     
   end
 end
+
+ArInception.install
