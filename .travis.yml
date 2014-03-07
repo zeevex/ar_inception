@@ -7,10 +7,11 @@ before_script:
 rvm:
   - 1.9.3
   - 2.0.0
+  - 2.1.0
 
 
 notifications:
   email:
     - robert@zeevex.com
 
-script: bundle exec rake spec
+script: bundle exec rake appraisal spec
