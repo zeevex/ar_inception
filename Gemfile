@@ -4,3 +4,6 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'appraisal'
+
+gem 'mysql2',     :platform => :mri
+gem 'jdbc-mysql', :platform => :jruby
