@@ -5,8 +5,8 @@ gemspec
 
 gem 'appraisal'
 
-gem 'activerecord',  '>= 2.3.18'
-gem 'activesupport', '>= 2.3.18'
+gem 'activerecord',  '~> 3.2.14'
+gem 'activesupport', '~> 3.2.14'
 
 gem 'mysql',      :platform => :mri
 
