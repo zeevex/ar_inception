@@ -8,8 +8,10 @@ require 'logger'
 require 'active_support'
 require 'active_record'
 
+ruby_engine = defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'mri'
+
 # sqlite doesn't support multiple active connections to the same DB
-ENV['DB'] ||= (RUBY_ENGINE == 'jruby' ? 'jdbcmysql' : 'mysql')
+ENV['DB'] ||= (ruby_engine == 'jruby' ? 'jdbcmysql' : 'mysql')
 
 database_yml = File.expand_path('../database.yml', __FILE__)
 if File.exists?(database_yml)
