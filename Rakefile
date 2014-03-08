@@ -14,11 +14,14 @@ namespace :spec do
 
   def _run_commands_with_rbenv(version, commands)
       Bundler.with_clean_env do
-        system %{bash -c 'eval "$(rbenv init -)" && unset GEM_HOME GEM_PATH && rbenv shell #{version} && } + 
+        system %{bash -c 'eval "$(rbenv init -)" && unset GEM_HOME GEM_PATH RBENV_VERSION && rbenv shell #{version} && } + 
            Array(commands).join(' && ') + "'"
       end
   end
 
+  task :platformdebug do
+    _run_commands_with_rbenv "1.8.7", ["ruby -v", "set"]
+  end
 
   desc "Run on three Rubies"
   task :platforms do
