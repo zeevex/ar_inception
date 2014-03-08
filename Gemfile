@@ -5,5 +5,5 @@ gemspec
 
 gem 'appraisal'
 
-gem 'mysql2',     :platform => :mri
+gem 'mysql',      :platform => :mri
 gem 'jdbc-mysql', :platform => :jruby
