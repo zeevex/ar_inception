@@ -5,6 +5,9 @@ require 'rspec'
 require 'ar_inception'
 require 'logger'
 
+require 'active_support'
+require 'active_record'
+
 # sqlite doesn't support multiple active connections to the same DB
 ENV['DB'] ||= 'mysql'
 
