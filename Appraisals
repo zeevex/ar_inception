@@ -8,7 +8,10 @@ appraise "rails-3" do
   gem "activesupport", "3.2.14"
 end
 
-appraise "rails-4" do
-  gem "activerecord", "4.0.0"
-  gem "activesupport", "4.0.0"
+# AR 4 doesn't support Ruby 1.8.7
+unless RUBY_VERSION.match(/^1\.8\./)
+  appraise "rails-4" do
+    gem "activerecord", "4.0.0"
+    gem "activesupport", "4.0.0"
+  end
 end
