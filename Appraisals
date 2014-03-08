@@ -1,6 +1,8 @@
-appraise "rails-2" do
-  gem "activerecord", "2.3.18"
-  gem "activesupport", "2.3.18"
+unless RUBY_VERSION.match(/^2\./)
+  appraise "rails-2" do
+    gem "activerecord", "2.3.18"
+    gem "activesupport", "2.3.18"
+  end
 end
 
 appraise "rails-3" do
