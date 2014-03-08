@@ -15,6 +15,11 @@ GEM
       activesupport (= 4.0.0)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
+    activerecord-jdbc-adapter (1.3.6)
+      activerecord (>= 2.2)
+    activerecord-jdbcmysql-adapter (1.3.6)
+      activerecord-jdbc-adapter (~> 1.3.6)
+      jdbc-mysql (>= 5.1.22)
     activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -55,6 +60,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 4.0.0)
+  activerecord-jdbc-adapter
+  activerecord-jdbcmysql-adapter
   activesupport (= 4.0.0)
   appraisal
   ar_inception!

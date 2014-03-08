@@ -9,7 +9,7 @@ require 'active_support'
 require 'active_record'
 
 # sqlite doesn't support multiple active connections to the same DB
-ENV['DB'] ||= 'mysql'
+ENV['DB'] ||= (RUBY_ENGINE == 'jruby' ? 'jdbcmysql' : 'mysql')
 
 database_yml = File.expand_path('../database.yml', __FILE__)
 if File.exists?(database_yml)
