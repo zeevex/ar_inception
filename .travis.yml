@@ -16,5 +16,7 @@ rvm:
 notifications:
   email:
     - robert@zeevex.com
+  slack: zeevex:Jis2p5PdNDJJ1wSNiGPh8fzW
 
 script: bundle exec rake appraisal spec
+
